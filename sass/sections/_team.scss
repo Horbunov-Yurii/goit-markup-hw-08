@@ -30,18 +30,23 @@
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
+      gap: 30px;
     }
   }
 
   &__item {
     background-color: $main-background-color;
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    
+     
+     @media screen and (max-width: 767px) {
+         &:not(:last-child) {
+          margin-bottom: 30px;
     }
+     }
+
 
     @media screen and (min-width: 768px) {
       width: calc((100% - 30px) / 2);
-      margin-right: 30px;
 
       &:nth-child(2n) {
         margin-right: 0;
@@ -50,11 +55,6 @@
 
     @media screen and (min-width: 1200px) {
       width: calc((100% - 90px) / 4);
-      margin-right: 30px;
-
-      &:nth-child(2n) {
-        margin-right: 30px;
-      }
 
       &:nth-child(4) {
         margin-right: 0;
@@ -81,12 +81,6 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
   }
-
-  // &__item:nth-child(3),
-  // &__item:last-child {
-  //   @media screen and (min-width: 768px) {
-  //     margin-bottom: 0;
-  //   }
 
   &__name {
     font-weight: 500;
