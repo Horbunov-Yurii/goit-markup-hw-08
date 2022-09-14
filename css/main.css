@@ -360,14 +360,14 @@ img {
 
 .hero {
   text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-logo.jpg");
+}
+.hero .container {
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-logo.jpg");
 }
 @media screen and (min-width: 768px) {
   .hero {
-    padding-top: 118px;
-    padding-bottom: 118px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-logo.jpg");
   }
   .hero .container {
@@ -378,8 +378,6 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-logo.jpg");
   }
   .hero .container {
@@ -401,7 +399,6 @@ img {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    padding-top: 200px;
   }
 }
 .hero__button {
@@ -1247,14 +1244,39 @@ footer {
   }
 }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
+@media screen and (min-width: 76px) {
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 30px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services {
+    margin-bottom: 50px;
+  }
 }
 .services__item {
   margin-right: 8px;
+  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .services__item {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services__item {
+    max-width: 370px;
+  }
 }
 .services__item:last-child {
   margin-right: 0;
@@ -1286,16 +1308,18 @@ footer {
   gap: 30px;
 }
 .collage__item {
-  max-width: 370px;
+  max-width: 450px;
 }
 @media screen and (min-width: 768px) {
   .collage__item {
     width: calc((100% - 30px) / 2);
+    max-width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .collage__item {
     width: calc((100% - 60px) / 3);
+    max-width: 370px;
   }
 }
 .collage__item:hover, .collage__item:focus {
