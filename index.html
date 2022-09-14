@@ -7,15 +7,13 @@
     <title>WebStudio</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-       rel="stylesheet"
-      />
+      rel="stylesheet"
+    />
     <!-- <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     /> -->
-    <link rel="stylesheet" href="./css/main.min.css">
-    
-  
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- шапка -->
@@ -27,13 +25,14 @@
           </a>
           <button class="nav__button" type="button">
             <svg width="40" height="40">
-              <use href="./images/symbol-defs.svg#menu-icon">
-              </use>
+              <use href="./images/symbol-defs.svg#menu-icon"></use>
             </svg>
           </button>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link nav__link-active">Студія</a>
+              <a href="./index.html" class="nav__link nav__link-active"
+                >Студія</a
+              >
             </li>
             <li class="nav__item">
               <a href="./peges/portfolio.html" class="nav__link">Портфоліо</a>
@@ -138,31 +137,49 @@
               <div class="work__text__posicion">
                 <h3 class="work__text">Десктопні додатки</h3>
               </div>
-              <img
-                src="./images/tablet.jpg"
-                alt="планшетные решения"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/imgwork1.jpg 2x,
+                    ./images/tablet.jpg 1x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/tablet.jpg" alt="планшетные решения" />
+              </picture>
             </li>
             <li class="work__item">
               <div class="work__text__posicion">
                 <h3 class="work__text">Мобільні додатки</h3>
               </div>
-              <img
-                src="./images/mobile.jpg"
-                alt="мобильные решения"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/imgwork2@.jpg 2x,
+                    ./images/mobile.jpg 1x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/mobile.jpg" alt="мобильные решения" />
+              </picture>
             </li>
             <li class="work__item">
               <div class="work__text__posicion">
                 <h3 class="work__text">Дизайнерські рішення</h3>
               </div>
-              <img
-                src="./images/design.jpg"
-                alt="дизайнерские решения"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/imgwork3@.jpg 2x,
+                    ./images/design.jpg 1x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/design.jpg"
+                  alt="дизайнерские решения"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -173,10 +190,10 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img class="team__photo"
+              <img
+                class="team__photo"
                 src="./images/product-designer.jpg"
                 alt="product-designer"
-                
               />
               <div class="team__card">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
@@ -220,10 +237,10 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__photo"
+              <img
+                class="team__photo"
                 src="./images/frontend-developer.jpg"
                 alt="frontend-developer"
-              
               />
               <div class="team__card">
                 <h3 class="team__name">Ольга Рєпіна</h3>
@@ -267,7 +284,11 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__photo" src="./images/marketing.jpg" alt="marketing" />
+              <img
+                class="team__photo"
+                src="./images/marketing.jpg"
+                alt="marketing"
+              />
               <div class="team__card">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__function">Marketing</p>
@@ -310,7 +331,8 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__photo" 
+              <img
+                class="team__photo"
                 src="./images/ui-designer.jpg"
                 alt="ui-designer"
                 width="270"
@@ -361,6 +383,8 @@
 
         <!-- наши клиенты -->
       </section>
+
+      <!-- наши клиенты -->
       <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постійні клієнти</h2>
@@ -477,11 +501,11 @@
         <div class="form">
           <h3 class="form__title">Підпишіться на розсилку</h3>
           <form class="form__block">
-            <input class="form__input" type="text" placeholder="E-mail">
-            <button class="form__button" type="submit">Підписатися 
+            <input class="form__input" type="text" placeholder="E-mail" />
+            <button class="form__button" type="submit">
+              Підписатися
               <svg class="form__send">
-                <use href="./images/symbol-defs.svg#footer-send">
-                </use>
+                <use href="./images/symbol-defs.svg#footer-send"></use>
               </svg>
             </button>
           </form>
@@ -503,44 +527,46 @@
               id="user-name"
             />
             <svg class="modal__icon" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#modal-user">
-                    </use>
-                  </svg>
+              <use href="./images/symbol-defs.svg#modal-user"></use>
+            </svg>
           </div>
 
           <div class="modal__field">
             <label class="modal__obiect" for="tel">Телефон</label>
             <input class="modal__input" type="tel" name="tel" id="tel" />
             <svg class="modal__icon" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#modal-tel">
-                    </use>
-                  </svg>
+              <use href="./images/symbol-defs.svg#modal-tel"></use>
+            </svg>
           </div>
 
           <div class="modal__field">
             <label class="modal__obiect" for="email">Пошта</label>
             <input class="modal__input" type="text" name="email" id="email" />
             <svg class="modal__icon" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#modal-email">
-                    </use>
-                  </svg>
+              <use href="./images/symbol-defs.svg#modal-email"></use>
+            </svg>
           </div>
-          <label class="modal__obiect"for="coment">Коментар</label>
-          <textarea 
+          <label class="modal__obiect" for="coment">Коментар</label>
+          <textarea
             class="modal__textarea"
             name="feedback"
-            placeholder="Введіть текст" id="coment"
+            placeholder="Введіть текст"
+            id="coment"
           ></textarea>
           <div class="modal__agreement">
-            <label class="modal__label" for="user-check"> 
-               <input class="modal__checkbox visually-hidden "  type="checkbox" name="user-check" id="user-check"/>
-               <span class="modal__check">  
-                  <svg class="modal__ico" width="11" height="8">
-                   <use href="./images/symbol-defs.svg#modal-check"></use>
-                  </svg>
-                </span>
-              <span> Погоджуюся з розсилкою та приймаю
+            <label class="modal__label" for="user-check">
+              <input
+                class="modal__checkbox visually-hidden"
+                type="checkbox"
+                name="user-check"
+                id="user-check"
+              />
+              <span class="modal__check">
+                <svg class="modal__ico" width="11" height="8">
+                  <use href="./images/symbol-defs.svg#modal-check"></use>
+                </svg>
               </span>
+              <span> Погоджуюся з розсилкою та приймаю </span>
             </label>
             <a class="modal__text" href="#">Умови договору</a>
           </div>
