@@ -335,11 +335,13 @@ border-bottom: 1px solid #ECECEC;
     z-index: 1;
      .container {
       position: relative;
-      height: 100%;
+      height: 680px;
+      top: 10px;
+      bottom: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-    padding: 48px 0 48px 25px;
+      justify-content: start;
+    padding: 48px 0 48px 40px;
       
     background-color: $main-background-color;
     }
@@ -356,6 +358,11 @@ border-bottom: 1px solid #ECECEC;
     border: none;
     font-size: 26px;
     
+  }
+
+  .mob-menu-list {
+    margin-bottom: 200px;
+    margin-right: auto;
   }
 
   
@@ -384,17 +391,12 @@ border-bottom: 1px solid #ECECEC;
     position: absolute;
     border: none;
     background-color: $main-background-color;
-    right: 35px;
-    top: -22px;
+    top: 10px;
+    right: 15px;
     &:hover {
       fill: $hover-color;
     }
   }
-
-//   .modal-close-icon {
-// background-color: red;
-//     fill: $body-text-color;
-//   }
   
   .mob-menu-contacts {
     margin-bottom: 64px;
