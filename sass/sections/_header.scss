@@ -16,6 +16,18 @@
   align-items: center;
   justify-content: center;
    }
+
+    & .btn-open {
+    border: none;
+    background-color: $main-background-color;
+    fill:  $body-text-color;
+    @media screen and (min-width: 768px) {
+      display: none;
+      }  
+      &:hover svg {
+        fill: $hover-color
+      }
+  }
   
 }
 

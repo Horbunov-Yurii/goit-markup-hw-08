@@ -79,6 +79,19 @@ img {
     justify-content: center;
   }
 }
+.header .container .btn-open {
+  border: none;
+  background-color: #ffffff;
+  fill: #212121;
+}
+@media screen and (min-width: 768px) {
+  .header .container .btn-open {
+    display: none;
+  }
+}
+.header .container .btn-open:hover svg {
+  fill: #2196f3;
+}
 
 .header {
   border-bottom: 1px solid #ECECEC;
