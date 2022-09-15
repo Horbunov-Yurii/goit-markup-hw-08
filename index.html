@@ -23,7 +23,7 @@
           <a href="/" class="logo"
             ><span class="logo__color">Web</span>Studio
           </a>
-          <button class="nav__button" type="button" data-modal-open>
+          <button class="nav__button" type="button" modal-header-open>
             <svg width="40" height="40">
               <use href="./images/symbol-defs.svg#menu-icon"></use>
             </svg>
@@ -60,9 +60,9 @@
             </a>
           </li>
         </ul>
-        <div class="mob-menu backdrop is-hidden" data-modal>
+        <div class="mob-menu backdrop is-hidden" header-modal>
           <div class="container">
-            <button type="button" class="btn-close" data-modal-close>
+            <button type="button" class="btn-close" modal-header-close>
               <svg class="modal-close-icon" width="40" height="40">
                 <use href="./images/symbol-defs.svg#icon-close"></use>
               </svg>
@@ -80,38 +80,36 @@
                 <a href="" class="mob-menu-list__link">Контакты</a>
               </li>
             </ul>
-            <div class="mob-menu-bottom">
-              <ul class="mob-menu-contacts list">
-                <li class="mob-menu-contacts__item">
-                  <a
-                    href=""
-                    class="mob-menu-contacts__link mob-menu-contacts__link_size_big"
-                    >+38 096 111 11 11</a
-                  >
-                </li>
-                <li class="mob-menu-contacts__item">
-                  <a
-                    href=""
-                    class="mob-menu-contacts__link mob-menu-contacts__link_size_small"
-                    >info@devstudio.com</a
-                  >
-                </li>
-              </ul>
-              <ul class="mob-menu-social list">
-                <li class="mob-menu-social__item">
-                  <a href="" class="mob-menu-social__link">Instagram</a>
-                </li>
-                <li class="mob-menu-social__item">
-                  <a href="" class="mob-menu-social__link">Twitter</a>
-                </li>
-                <li class="mob-menu-social__item">
-                  <a href="" class="mob-menu-social__link">Facebook</a>
-                </li>
-                <li class="mob-menu-social__item">
-                  <a href="" class="mob-menu-social__link">LinkedIn</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="mob-menu-contacts">
+              <li class="mob-menu-contacts__item">
+                <a
+                  href=""
+                  class="mob-menu-contacts__link mob-menu-contacts__link_size_big"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-menu-contacts__item">
+                <a
+                  href=""
+                  class="mob-menu-contacts__link mob-menu-contacts__link_size_small"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu-social">
+              <li class="mob-menu-social__item">
+                <a href="" class="mob-menu-social__link">Instagram</a>
+              </li>
+              <li class="mob-menu-social__item">
+                <a href="" class="mob-menu-social__link">Twitter</a>
+              </li>
+              <li class="mob-menu-social__item">
+                <a href="" class="mob-menu-social__link">Facebook</a>
+              </li>
+              <li class="mob-menu-social__item">
+                <a href="" class="mob-menu-social__link">LinkedIn</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -191,46 +189,43 @@
               <div class="work__text__posicion">
                 <h3 class="work__text">Десктопні додатки</h3>
               </div>
-              <picture>
-                <source
-                  srcset="
-                    ./images/desktop/imgwork1.jpg 2x,
-                    ./images/tablet.jpg           1x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <img src="./images/tablet.jpg" alt="планшетные решения" />
-              </picture>
+              <img
+                src="./images/dextop/work1.jpg"
+                alt="Десктопні додатки"
+                srcset="
+                  ./images/dextop/work1.jpg  1x,
+                  ./images/dextop/work1@.jpg 2x
+                "
+                width="370"
+              />
             </li>
             <li class="work__item">
               <div class="work__text__posicion">
                 <h3 class="work__text">Мобільні додатки</h3>
               </div>
-              <picture>
-                <source
-                  srcset="
-                    ./images/desktop/imgwork2@.jpg 2x,
-                    ./images/mobile.jpg            1x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <img src="./images/mobile.jpg" alt="мобильные решения" />
-              </picture>
+              <img
+                src="./images/dextop/work2.jpg"
+                alt="Мобільні додатки"
+                srcset="
+                  ./images/dextop/work2.jpg  1x,
+                  ./images/dextop/work2@.jpg 2x
+                "
+                width="370"
+              />
             </li>
             <li class="work__item">
               <div class="work__text__posicion">
                 <h3 class="work__text">Дизайнерські рішення</h3>
               </div>
-              <picture>
-                <source
-                  srcset="
-                    ./images/desktop/imgwork3@.jpg 2x,
-                    ./images/design.jpg            1x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <img src="./images/design.jpg" alt="дизайнерские решения" />
-              </picture>
+              <img
+                src="./images/dextop/work3.jpg"
+                alt="Дизайнерські рішення"
+                srcset="
+                  ./images/dextop/work3.jpg  1x,
+                  ./images/dextop/work3@.jpg 2x
+                "
+                width="370"
+              />
             </li>
           </ul>
         </div>
@@ -241,11 +236,35 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__photo"
-                src="./images/product-designer.jpg"
-                alt="product-designer"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/dextop/imgteam1@.jpg 2x,
+                    ./images/dextop/imgteam1.jpg  1x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/imgtab1@.jpg 2x,
+                    ./images/tablet/imgtab1.jpg  1x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/imgmob.1@.jpg 2x,
+                    ./images/mobile/imgmob.1.jpg  1x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__photo"
+                  src="./images/product-designer.jpg"
+                  alt="product-designer"
+                />
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__function">Product Designer</p>
@@ -630,6 +649,7 @@
         </button>
       </div>
     </div>
+    <script src="./js/modal-header.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

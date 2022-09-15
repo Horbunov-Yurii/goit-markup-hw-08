@@ -36,6 +36,8 @@
 
   &__item {
     background-color: $main-background-color;
+    flex-direction: column;
+    display: flex;
     
      
      @media screen and (max-width: 767px) {
@@ -48,17 +50,13 @@
     @media screen and (min-width: 768px) {
       width: calc((100% - 30px) / 2);
 
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
+     
     }
 
     @media screen and (min-width: 1200px) {
       width: calc((100% - 90px) / 4);
 
-      &:nth-child(4) {
-        margin-right: 0;
-      }
+    
     }
   }
 
